@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-dark-blue {
+    background-color: #0f172a; /* Dark navy blue */
+}
+
+.text-light-gray {
+    color: #f8fafc; /* Light gray */
+}
+
+.bg-dark-blue-light {
+    background-color: #1e293b; /* Slightly lighter dark blue */
+}
+
+.text-teal {
+    color: #0ea5e9; /* Blue accent color */
+}
+
+.text-dark-blue {
+    color: #0f172a; /* Dark navy blue */
+}
+
+.border-teal {
+    border-color: #0ea5e9; /* Blue accent color */
+}
+
+.hover\:text-teal:hover {
+    color: #0ea5e9; /* Blue accent color */
+}
+
+.hover\:border-teal:hover {
+    border-color: #0ea5e9; /* Blue accent color */
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+.transition-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.custom-hover-bg {
+    background-color: rgba(14, 165, 233, 0.5); /* Blue accent color with 50% opacity */
+}
+
+#skill-detail {
+    background-color: transparent;
+}
+
+.custom-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default padding */
+}
+
+.custom-list li {
+    position: relative; /* Position for custom bullet */
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+.custom-list li::before {
+    content: '▹'; /* Custom bullet character */
+    position: absolute; /* Position bullet */
+    left: 0; /* Align bullet to the left */
+    color: #0ea5e9; /* Custom bullet color (Blue) */
+}
+
+.click {
+    color: #0f172a;
+    text-align: center;
+    font-weight: bold;
+}

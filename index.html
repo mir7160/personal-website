@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark-blue text-light-gray">
+    <header class="fixed w-full bg-dark-blue bg-opacity-100 p-6 z-20 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-teal">M</div>
+            <nav class="hidden md:flex flex-grow justify-center space-x-4">
+                <ul class="flex text-xl space-x-8">
+                    <li><a href="#experience" class="hover:text-teal">Experience</a></li>
+                    <li><a href="#leadership" class="hover:text-teal">Leadership</a></li>
+                    <li><a href="#fellowships" class="hover:text-teal">Fellowships</a></li>
+                    <li><a href="#skills" class="hover:text-teal">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-teal">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-teal">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://drive.google.com/file/d/1Ht4GRy9OjJjS0HCuMCYN284NMrYxHwUI/view?usp=sharing" class="border border-teal text-teal px-4 py-2 rounded hover:bg-teal hover:text-dark-blue">Resume</a>
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Hamburger menu -->
+        <nav id="mobile-menu" class="hidden md:hidden">
+            <a href="#experience" class="block px-3 py-2 rounded hover:text-teal">Experience</a>
+            <a href="#leadership" class="block px-3 py-2 rounded hover:text-teal">Leadership</a>
+            <a href="#fellowships" class="block px-3 py-2 rounded hover:text-teal">Fellowships</a>
+            <a href="#skills" class="block px-3 py-2 rounded hover:text-teal">Skills</a>
+            <a href="#projects" class="block px-3 py-2 rounded hover:text-teal">Projects</a>
+            <a href="#contact" class="block px-3 py-2 rounded hover:text-teal">Contact</a>
+            <a href="https://drive.google.com/file/d/1Ht4GRy9OjJjS0HCuMCYN284NMrYxHwUI/view?usp=sharing" class="block px-3 py-2 rounded border-2 border-teal text-teal hover:bg-teal hover:text-dark-blue">Resume</a>
+        </nav>
+    </header>
+    <main class="pt-24">
+        <section id="about" class="flex flex-col justify-center items-center text-center">
+            <div class="container mx-auto flex flex-col md:flex-row items-center text-left my-20 px-10">
+                <div class="md:w-1/2">
+                    <p class="text-teal text-xl mb-4">Hi, my name is</p>
+                    <h1 class="text-5xl md:text-7xl font-bold text-light-gray mb-4">Mir Farid</h1>
+                    <p class="max-w-xl text-lg md:text-xl text-gray-400 mb-8">
+                        I am a recent grad with a strong foundation in computer science. As a highly motivated individual, I have had <span class="text-teal">4 software engineering internships</span> 
+                        in a variety of industries including technology, law, finance, and education. I have worked at <span class="text-teal">companies such as Visa</span> and even <span class="text-teal">startups such as Flocabulary</span>.
+                    </p>
+                    <p class="max-w-xl text-lg md:text-xl text-gray-400 mb-8">
+                        In addition to my professional experience, I have been actively involved in my campus community, serving as the <span class="text-teal">President</span> 
+                        of the largest and oldest tech organization on campus, <span class="text-teal">leading a multi-semester project</span> to build a club management system for the university, and <span class="text-teal">teaching a non-credit course</span> on mobile app development.
+                    </p>
+                    <p class="max-w-xl text-lg md:text-xl text-gray-400 mb-8">
+                        I have chosen to pursue a career in software engineering due to my passion for <span class="text-teal">problem solving</span>, hunger for <span class="text-teal">continuous learning</span>, and desire to <span class="text-teal">build impactful solutions</span>.
+                    </p>
+                    <p class="max-w-xl text-lg md:text-xl text-gray-400 mb-8">
+                        Explore my site to learn more about my journey and connect with me!
+                    </p>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+                    <img src="https://i.imgur.com/qtItLtF.png" referrerpolicy="no-referrer" alt="profile picture" class="rounded shadow-lg">
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="py-20 bg-dark-blue text-left">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-bold text-teal mb-10 mx-40">Where I've Worked</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-56 h-20 md:h-40 px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="visa" onclick="showDetail('visa')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/2880px-Visa_2021.svg.png" alt="Visa Logo" class="w-48 h-48 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-56 h-20 md:h-40 px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="paulweiss" onclick="showDetail('paulweiss')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Weiss_Logo_1.svg/2880px-Paul_Weiss_Logo_1.svg.png" alt="Paul Weiss Logo" class="w-48 h-48 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-56 h-20 md:h-40 px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="prove" onclick="showDetail('prove')">
+                        <img src="https://partner.visa.com/content/dam/gpp/partner-directory/prove%20logo.png" alt="Prove Logo" class="w-48 h-48 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-56 h-20 md:h-40 px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="flocabulary" onclick="showDetail('flocabulary')">
+                        <img src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/235323/Flocabulary_1200x284px.png" alt="Flocabulary Logo" class="w-48 h-48 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="experience-detail" class="mt-8 hidden mx-auto max-w-4xl">
+                    <!-- This is where the detailed view will be displayed -->
+                </div>
+            </div>
+        </section>
+        <section id="leadership" class="py-20 bg-dark-blue text-left">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-teal mb-10 mx-40">Leadership</h2>
+                <div class="flex space-x-4 justify-center">
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40 cursor-pointer flex items-center justify-center relative group" data-target="sbcs" onclick="showLeadershipDetail('sbcs')">
+                        <img src="https://sbcs.io/logos/newlogo.png" alt="SBCS Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40 px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="vip" onclick="showLeadershipDetail('vip')">
+                        <img src="https://www.stonybrook.edu/commcms/vertically-integrated-projects/teams/_team_page/_includes/post.php?image=Energize!&v=1" alt="VIP Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40 cursor-pointer flex items-center justify-center relative group" data-target="codepath" onclick="showLeadershipDetail('codepath')">
+                        <img src="https://pbs.twimg.com/profile_images/1527299950073217024/H3Kw4tkF_400x400.jpg" alt="CodePath Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40 cursor-pointer flex items-center justify-center relative group" data-target="peermentor" onclick="showLeadershipDetail('peermentor')">
+                        <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/72485143_2657048241176425_1944807139188932608_n.png?_nc_cat=104&ccb=1-7&_nc_sid=53a332&_nc_ohc=Nuk8KXjRb5IQ7kNvgG7lVL4&_nc_ht=scontent-lga3-2.xx&oh=00_AYBouioQFDGXHN6gIZGOJ3tnrrfxVc9isj1sz8AjNXynPQ&oe=66CBDEB4" alt="Peer Mentor Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="leadership-detail" class="mt-8 hidden mx-auto max-w-4xl">
+                    <!-- This is where the detailed view will be displayed -->
+                </div>
+            </div>
+        </section>
+        <section id="fellowships" class="py-20 bg-dark-blue text-left">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-teal mb-10 mx-40">Fellowships</h2>
+                <div class="flex space-x-4 justify-center">
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40 px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="nbc" onclick="showFellowshipDetail('nbc')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/NBCUniversal_Logo.svg/600px-NBCUniversal_Logo.svg.png" alt="NBC Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40  px-1 md:p-0 cursor-pointer flex items-center justify-center relative group" data-target="pwc" onclick="showFellowshipDetail('pwc')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/PricewaterhouseCoopers_Logo.svg/2880px-PricewaterhouseCoopers_Logo.svg.png" alt="PwC Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg flex-none w-1/5 md:w-48 h-20 md:h-40 cursor-pointer flex items-center justify-center relative group" data-target="google" onclick="showFellowshipDetail('google')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="w-40 h-40 object-contain">
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-4xl">Click to view more</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="fellowship-detail" class="mt-8 hidden mx-auto max-w-4xl">
+                    <!-- This is where the detailed view will be displayed -->
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="py-20 bg-dark-blue text-left">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-teal mb-10 mx-40">Skills</h2>
+                <div class="flex space-x-4 justify-center">
+                    <div class="bg-dark-blue-light border-2 border-teal rounded-lg shadow-lg p-2 cursor-pointer flex items-center justify-center relative group" data-target="programming" onclick="showSkillDetail('programming')">
+                        <span class="text-light-gray text-lg text-center leading-tight">
+                            programming languages/<br>frameworks
+                        </span>
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-wrap">Click to view more</span>
+                        </div>
+                    </div>
+                    <div class="bg-dark-blue-light border-2 border-teal rounded-lg shadow-lg p-2 cursor-pointer flex items-center justify-center relative group" data-target="tools" onclick="showSkillDetail('tools')">
+                        <span class="text-light-gray text-lg text-center leading-tight">
+                            tools/ platforms
+                        </span>
+                        <div class="absolute inset-0 custom-hover-bg opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="click text-wrap">Click to view more</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="skill-detail" class="mt-8 hidden mx-auto max-w-4xl">
+                    <!-- This is where the detailed view will be displayed -->
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="py-20 bg-dark-blue text-left">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-teal mb-10 mx-40">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-dark-blue-light p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-light-gray mb-2">Flixter iOS App</h3>
+                        <p class="text-base text-gray-400 mb-4">Mobile app that recommends movies</p>
+                        <div class="text-base text-gray-400">Made with: Swift, Movie Database API</div>
+                        <a href="https://github.com/mir7160/Flixster-iOS-" target="_blank">Link</a>
+                    </div>
+                    <div class="bg-dark-blue-light p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-light-gray mb-2">Simple Tweet App</h3>
+                        <p class="text-base text-gray-400 mb-4">Twitter timeline viewer</p>
+                        <div class="text-base text-gray-400">Made with: Java, Twitter REST API, Glide</div>
+                        <a href="https://github.com/mir7160/SimpleTweet" target="_blank">Link</a>
+                    </div>
+                    <div class="bg-dark-blue-light p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-light-gray mb-2">Image-sharing mobile app</h3>
+                        <p class="text-base text-gray-400 mb-4">Users can take a photo, add a caption, and post it</p>
+                        <div class="text-base text-gray-400">Made with: Swift and Parse serverless backend for user authentication</div>
+                        <a href="https://github.com/mir7160/Parsestagram" target="_blank">Link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="py-20 bg-dark-blue text-left">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-teal mb-10 mx-40">Contact</h2>
+                <p class="text-xl">Feel free to connect with me on LinkedIn 
+                    <br>
+                    or reach out to me via email at <span class="text-teal">mirfarid7160@gmail.com</span></p>
+                <div class="flex justify-center items-center space-x-4 px-4 py-4">
+                    <a href="https://example.com">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/LinkedIn_logo.svg/1600px-LinkedIn_logo.svg.png?20230525070944" alt="LinkedIn Logo" width="120" height="40" class="border-2 border-teal rounded px-4 py-2">
+                    </a>
+                    <a href="mailto:mirfarid7160@gmail.com">
+                        <button class="text-xl border-2 border-teal text-teal px-4 py-2 rounded hover:bg-teal hover:text-dark-blue">Email</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-4 bg-dark-blue text-center text-gray-400">
+        <p>&copy; 2024 Mir Farid</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
